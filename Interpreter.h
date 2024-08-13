@@ -181,7 +181,7 @@ struct Interpreter : Visitor {
 		file.declarations += "Set<" + type_ + "> " + name_ + ";\n";
 		file.definitions += type_ + " " + succ_name_ + "(" + type_ + " __self__, size_t __no__) {\n"
 			+ "return " +  succ_ + ";\n}\n";
-		file.instantiations += name_ +  " = Set((" + type_ + ")" + base_ + "," + succ_name_ + ")" + ";\n";
+		file.instantiations += name_ +  " = Set<" + type_ + ">" + "((" + type_ + ")" + base_ + ", " + succ_name_ + ")" + "; \n";
 	}
 	void visit(Show* show_) override  {
 		string arg_ = Serializer::get_value(show_->arg);
