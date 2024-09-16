@@ -1,6 +1,7 @@
 #ifndef SET_H
 #define SET_H
 #include <iostream>
+#include <iomanip>
 template <typename type>
 struct Set {
 	type base;
@@ -17,7 +18,7 @@ struct Set {
 	friend std::ostream& operator<<(std::ostream& os, Set<type>& set_) {
 		os << "{" << set_.get(0) << ",";
 		for (size_t i = 1; i < 4; i++) {
-			os << " " << set_.get(i) << ",";
+			os << " " << std::setprecision(3) << set_.get(i) << ",";
 		}
 		os << "...}";
 
