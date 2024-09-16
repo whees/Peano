@@ -1,2 +1,2 @@
 # Peano
-An interpreter/IDE for the custom language Peano build for inductive types.
+An interpreter/IDE for the custom language Peano built for inductive types.
